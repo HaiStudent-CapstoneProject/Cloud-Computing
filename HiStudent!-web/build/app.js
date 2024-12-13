@@ -9,13 +9,12 @@ import {
 
 // Firebase Configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAiEJl-peNdoYmVWuMUDSWJJ7qGRXgNq-c",
-  authDomain: "histudent-web.firebaseapp.com",
-  projectId: "histudent-web",
-  storageBucket: "histudent-web.firebasestorage.app",
-  messagingSenderId: "472200870701",
-  appId: "1:472200870701:web:3454afe8212c90ee05b1a4",
-  measurementId: "G-Z8H9SQ2F8Y",
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
 };
 
 // Initialize Firebase
