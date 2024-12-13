@@ -1,0 +1,30 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/haistudocr', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/haistudocr']
+
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args:
+  - 'run'
+  - 'deploy'
+  - 'haistudocr'
+  - '--image'
+  - 'gcr.io/$PROJECT_ID/haistudocr'
+  - '--region'
+  - 'asia-southeast2'
+  - '--platform'
+  - 'managed'
+  - '--allow-unauthenticated'
+  - '--memory=4Gi'
+  - '--cpu=2'
+  - '--timeout=3600'
+  - '--ingress=all'
+  - '--no-cpu-throttling'
+
+images:
+- 'gcr.io/$PROJECT_ID/haistudocr'
+
+timeout: '3600s'

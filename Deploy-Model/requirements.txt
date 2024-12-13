@@ -1,0 +1,14 @@
+flask
+flask-cors
+tensorflow==2.18.0
+numpy
+pandas
+h5py
+scikit-learn
+Pillow
+opencv-python-headless
+matplotlib
+openpyxl
+Werkzeug
+gunicorn
+google-cloud-storage==2.13.0
